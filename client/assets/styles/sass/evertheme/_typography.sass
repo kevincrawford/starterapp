@@ -1,0 +1,70 @@
+@charset "UTF-8"
+
+// Font Size
+html
+  font-family: sans-serif
+  font-size: $et-base-font-size / 16 * 100%
+  line-height: $et-leading
+
+// Paragraphs & Lists
+p
+  line-height: $et-leading
+  margin-top: $et-leading
+  margin-bottom: 0
+
+ul, ol
+  margin-top: $et-leading
+  margin-bottom: $et-leading
+  li
+    line-height: $et-leading
+  ul, ol
+    margin-top: 0
+    margin-bottom: 0
+
+blockquote
+  line-height: $et-leading
+  margin-top: $et-leading
+  margin-bottom: $et-leading
+
+// Headings
+h1, h2, h3, h4, h5, h6
+  font-family: sans-serif
+  margin-top: $et-leading
+  margin-bottom: 0
+  line-height: $et-leading
+
+h1
+  font-size: 1.6 * $et-scale * 1rem
+  line-height: 2 * $et-leading
+h2
+  font-size: 1.4 * $et-scale * 1rem
+h3
+  font-size: 1.2 * $et-scale * 1rem
+h4
+  font-size: 1 * $et-scale * 1rem
+h5
+  font-size: .8 * $et-scale * 1rem
+h6
+  font-size: .6 * $et-scale * 1rem
+
+// Tables
+table
+  margin-top: $et-leading
+  border-spacing: 0px
+  border-collapse: collapse
+
+  td, th
+    padding: 0
+    line-height: $et-base-line-height * $et-base-font-size - 0px
+
+// Code blocks
+code
+  vertical-align: bottom
+
+// et-leading
+.lead
+  font-size: $et-scale * 1rem
+
+// Hug to a the block above you
+.hug
+  margin-top: 0

@@ -1,0 +1,66 @@
+@charset "UTF-8"
+
+// clearfix
+.et-row
+  margin: 0 auto
+  max-width: $et-grid-row-width
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+// Attribute selector
+// Also I've removed :last-of-type
+.et-row [class*='et-c']
+  float: left
+
+// Create grid widths (1-12)
+@for $i from $et-grid-start through $et-grid-end
+  .et-c#{$i}
+    width: $et-full / $i
+
+// Common widths
+// Please use the media queries below to respond these widths
+// Feel free to pull request new widths
+@each $i in $et-grid-common
+  .et-c#{$i}
+    width: percentage($i / 100)
+
+// Responsiveness
+// Feel free to use your own responsive widths and styles for the grid
+// These are mostly for example use only.
+// -------------------------------------------------------------------
+
+// Mobile
+@media (max-width: $et-small)
+  @for $i from $et-grid-start through $et-grid-end
+    .et-c#{$i}
+      width: $et-full
+
+// Portrait Tablet
+@media (min-width: $et-small) and (max-width: $et-medium)
+  .et-c4,
+  .et-c6,
+  .et-c8,
+  .et-c10,
+  .et-c12
+    width: $et-half
+  .et-c1,
+  .et-c2,
+  .et-c3,
+  .et-c5,
+  .et-c7,
+  .et-c9,
+  .et-c11
+    width: $et-full
+
+// Landscape Tablet
+@media (min-width: $et-medium) and (max-width: $et-large)
+  .et-c2,
+  .et-c7
+    width: $et-full
+  .et-c4,
+  .et-c8,
+  .et-c10,
+  .et-c12
+    width: $et-half

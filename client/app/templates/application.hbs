@@ -1,3 +1,4 @@
+<!--
 <header {{bind-attr class='isMenuOpen:open'}}>
   <div class='app-bar'>
     <button class="menu" {{action 'toggleMenu'}}>
@@ -12,11 +13,13 @@
 <nav {{bind-attr class='isMenuOpen:open'}} {{action 'close'}}>
   <h4> Navigation </h4>
   <ul>
-    <li> {{#link-to 'index'}} Home {{/link-to}} </li>
-    <li> {{#link-to 'users'}} Users {{/link-to}} </li>
   </ul>
 </nav>
-
+-->
+<div class="et-row">
+    <div class="et-c6">{{#link-to 'index'}} Home {{/link-to}}</div>
+    <div class="et-c6">{{#link-to 'users'}} Users {{/link-to}}</div>
+</div>
 <main>
   {{outlet}}
 </main>
